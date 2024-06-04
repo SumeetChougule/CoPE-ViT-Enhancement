@@ -105,4 +105,5 @@ This project is licensed under the MIT License.
 Acknowledgements
 
 •	The original Vision Transformer paper by Dosovitskiy et al. 
+
 •	The contextual position embedding paper by Golovneva et al. inspiring this work https://arxiv.org/pdf/2405.18719
