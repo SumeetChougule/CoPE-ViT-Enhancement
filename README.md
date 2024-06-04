@@ -9,48 +9,99 @@ Traditional Vision Transformers use fixed position embeddings to retain spatial 
 
 ## Key Features
 
+- Build ViT-B/16 architreture as per the ViT paper. 
 - Implementation of CoPE in ViT architecture.
 - Comparative analysis of traditional position embeddings versus CoPE.
-- Scripts for training and evaluating the model on various datasets.
+- Scripts for training the model on various datasets.
 
-## Getting Started
 
-### Prerequisites
+## Table of Contents
 
-- Python 3.8+
-- PyTorch
-- Hugging Face Transformers
+- [Installation](#installation)
+- [Usage](#usage)
+  - [Training](#training)
+- [Results](#results)
+- [Contributing](#contributing)
+- [License](#license)
 
-### Installation
 
-Clone the repository:
+## Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/your-username/CoPE-ViT-Enhancement.git
+   cd CoPE-ViT-Enhancement
+   ```
+
+2. Create a conda environment using the provided `environment.yml` file:
+
+    ```bash
+    conda env create -f environment.yml
+    conda activate vision_env
+    ```
+
+3. Install the package:
+
+    ```bash
+    pip install -e .
+    ```
+
+
+## Usage
+
+### Training
+
+To train the ViT model with CoPE:
 
 ```bash
-git clone https://github.com/your-username/CoPE-ViT-Enhancement.git
-cd CoPE-ViT-Enhancement
+python training_ViT.py
+```
 
-Install the required packages:
 
-pip install -r requirements.txt
+## Results
 
-Usage
+The performance of the ViT model using CoPE has shown improved results compared to the absolute encoding method. The model was trained on a small dataset consisting of images of food items (pizza, steak, sushi). Given the limited size of the dataset, the training and testing loss and accuracy curves exhibit some variability. But, we see advantages of using CoPE over relative PE. The following plots demonstrate the loss and accuracy trends:
 
-Training
+### Loss and Accuracy Plots of CoPE_ViT
 
-To train the model with CoPE:
+![Plot](CoPE_ViT_results.png)
 
-python train.py --config configs/cope_vit.yaml
+### Analysis
 
-Evaluation
+- **Loss**: Both the training and test loss decreased steadily, indicating effective learning and generalization.
+- **Accuracy**: The training accuracy increased with some fluctuations, while the test accuracy also improved but at a lower rate.
 
-To evaluate the trained model:
+### Loss and Accuracy Plots of ViT using relative positional encoding
 
-python evaluate.py --model_path checkpoints/cope_vit.pth --data_path data/test
+![Plot](ViT_result.png)
 
-Results
 
-	•	Detailed performance metrics comparing traditional position embeddings and CoPE.
-	•	Visualizations of attention maps showing the impact of CoPE.
+
+## Contributing
+
+Contributions are welcome! Please fork the repository and submit a pull request for any enhancements or bug fixes.
+
+1. Fork the repository.
+2. Create a feature branch (`git checkout -b feature-branch`).
+3. Commit your changes (`git commit -am 'Add new feature'`).
+4. Push to the branch (`git push origin feature-branch`).
+5. Create a new pull request.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+Feel free to customize this README file further based on your project specifics. If you need any additional sections or information, let me know!
+
+
+
+
+
+
+
 
 Contributing
 

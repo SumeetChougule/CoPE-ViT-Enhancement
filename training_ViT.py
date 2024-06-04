@@ -1,4 +1,5 @@
 import torch
+import numpy as np
 from ViT_arc import ViT, data
 from src import engine, utils
 
@@ -38,4 +39,4 @@ results = engine.train(
 
 # Plot our ViT model's loss curves
 utils.plot_loss_curves(results)
-utils.save_model(model=vit, target_dir="models", model_name="CoPE_ViT_trained.pth")
+utils.save_model(model=cope_vit, target_dir="models", model_name="CoPE_ViT_trained.pth")

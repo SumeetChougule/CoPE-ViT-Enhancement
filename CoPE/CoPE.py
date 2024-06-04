@@ -17,10 +17,10 @@ class CoPEViT(nn.Module):
         self.key = nn.Linear(embed_dim, embed_dim)
         self.value = nn.Linear(embed_dim, embed_dim)
 
-        # Learnable position embeddings (B, D, N+1)
+        # Learnable position embeddings
         self.position_embeddings = nn.Parameter(
-            torch.randn(1, embed_dim, num_patches + 1), requires_grad=True
-        )
+            torch.randn(1, embed_dim, num_patches), requires_grad=True
+        )  # (B,N,D)
 
         # Sigmoid function for gating
         self.sigmoid = nn.Sigmoid()

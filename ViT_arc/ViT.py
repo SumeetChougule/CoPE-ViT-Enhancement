@@ -252,9 +252,6 @@ class ViT_Base(nn.Module):
         # Pass patch, position and class embedding through transformer encoder layers (eq 2 & 3)
         x = self.transformer_encoder(x)
 
-        # Get attention weights from the last encoder layer
-        # attn_weights = self.position_embedding.attention_weights
-
         # put 0 index logit through the classifier eq 4
         x = self.classifier(x[:, 0])
 
@@ -263,13 +260,14 @@ class ViT_Base(nn.Module):
 
 # Example
 # random_image_tensor = torch.randn(1, 3, 224, 224)
-# vit = ViT(num_classes=1000)
+# vit = ViT_Base(num_classes=3)
 # vit(random_image_tensor)
 
 
-# Print a summary of our custom ViT model using torchinfo (uncomment for actual output)
+# # Print a summary of our custom ViT model using torchinfo (uncomment for actual output)
 
 # from torchinfo import summary
+
 # summary(
 #     model=vit,
 #     input_size=(32, 3, 224, 224),  # (batch_size, color_channels, height, width)
