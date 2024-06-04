@@ -92,15 +92,6 @@ Contributions are welcome! Please fork the repository and submit a pull request 
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
----
-
-Feel free to customize this README file further based on your project specifics. If you need any additional sections or information, let me know!
-
-
-
-
-
-
 
 
 Contributing
@@ -113,5 +104,5 @@ This project is licensed under the MIT License.
 
 Acknowledgements
 
-	•	The original Vision Transformer paper by Dosovitskiy et al.
-	•	The contextual position embedding paper inspiring this work.
+	•	The original Vision Transformer paper by Dosovitskiy et al. 
+	•	The contextual position embedding paper by Golovneva et al. inspiring this work https://arxiv.org/pdf/2405.18719
