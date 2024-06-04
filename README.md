@@ -1,5 +1,5 @@
 # CoPE-ViT-Enhancement
-This project implements a novel contextual position embedding technique (CoPE)[link](https://arxiv.org/pdf/2405.18719) in Vision Transformers (ViT) to improve their performance. The repository contains the implementation, training scripts, and evaluation metrics.
+This project implements a novel contextual position embedding technique [CoPE](https://arxiv.org/pdf/2405.18719) in Vision Transformers (ViT) to improve their performance. The repository contains the implementation, training scripts, and evaluation metrics.
 
 
 
